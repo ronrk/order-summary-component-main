@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --color-blue: hsl(225, 100%, 94%);
+  --color-blue-bright: hsl(245, 75%, 52%);
+  --color-blue-pale: hsl(225, 100%, 98%);
+  --color-blue-desaturated: hsl(224, 23%, 55%);
+  --color-blue-dark: hsl(223, 47%, 23%);
+
+  --font: 'Red Hat Display', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-blue),
+    var(--color-blue-pale)
+  );
+}
+
+.pallete {
+  /* margin-top: auto; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  height: 80vh;
+
+  background-color: #fff;
+  border-radius: 3rem;
+}
+
+.hero {
+  background-image: url(/images/illustration-hero.svg);
+  height: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  margin-bottom: 4rem;
+  align-self: stretch;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: var(--color-blue-desaturated);
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.text {
+  color: var(--color-blue-desaturated);
+  padding: 2rem 9rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.3;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.plan {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 3rem;
+  background-color: rgba(238, 238, 238, 0.3);
+  margin: 3rem 0;
+  margin-bottom: auto;
+}
+
+.plan__icon {
+  background-image: url(/images/icon-music.svg);
+  height: 5rem;
+  width: 5rem;
+  background-repeat: no-repeat;
+  margin-right: 2.5rem;
+  /* align-self: stretch; */
+}
+
+.plan__current-plan {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+}
+
+.plan__current-plan--text {
+  color: var(--color-blue-dark);
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.plan__current-plan--price {
+  color: var(--color-blue-desaturated);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.plan__change:link,
+.plan__change:visited {
+  color: var(--color-blue-bright);
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  transition: all 0.1s;
+  /* align-self: baseline;  */
+}
+.plan__change:active {
+  color: var(--color-blue-desaturated);
+  text-decoration: none;
+}
+
+.action {
+  margin-bottom: 0;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.action__proceed {
+  padding: 1rem 4rem;
+  background-color: var(--color-blue-bright);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 1.1rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.action__proceed:active {
+  background-color: var(--color-blue-desaturated);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.action__cancel {
+  padding: 1rem 4rem;
+  background-color: transparent;
+  color: var(--color-blue-desaturated);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 1.1rem;
+  margin-bottom: 0.8rem;
+  transition: all 0.2s ease;
+}
+.action__cancel:active {
+  color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    text-align: center;
+  }
+  .text {
+    padding: 2rem 5rem;
+    margin-bottom: 0;
+  }
+} ;
